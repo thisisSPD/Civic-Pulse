@@ -1,0 +1,6 @@
+{
+  "name": "CivicPulse",
+  "description": "AI-powered civic reporting, real-time issue synchronization, and predictive department dispatch system.",
+  "requestFramePermissions": ["camera", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

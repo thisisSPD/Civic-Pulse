@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Swiss Minimalist Stark Light Theme */
+body {
+  background-color: #f7f7f9;
+  color: #111111;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-attachment: fixed;
+}
+
+/* Swiss Grid Card Layouts */
+.glass-panel {
+  background: #ffffff;
+  border: 1px solid #e5e5e7;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 8px 24px rgba(0, 0, 0, 0.03);
+}
+
+.glass-panel-heavy {
+  background: #ffffff;
+  border: 2px solid #111111;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+}
+
+/* Soft glowing pulse effects redesigned for high-contrast light mode */
+.glow-emerald {
+  box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.2), 0 4px 12px rgba(16, 185, 129, 0.05);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.2), 0 4px 12px rgba(6, 182, 212, 0.05);
+}
+
+/* Custom styled Leaflet light mode overlays */
+.leaflet-container {
+  background: #f4f4f6 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #ffffff !important;
+  color: #111111 !important;
+  border: 1px solid #e5e5e7 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 8px !important;
+  font-family: var(--font-sans) !important;
+}
+
+.leaflet-popup-tip {
+  background: #ffffff !important;
+  border: 1px solid #e5e5e7 !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: inherit !important;
+}
+
+.leaflet-bar {
+  border: 1px solid #e5e5e7 !important;
+  box-shadow: none !important;
+}
+
+.leaflet-bar a {
+  background-color: #ffffff !important;
+  color: #555555 !important;
+  border-bottom: 1px solid #e5e5e7 !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: #f7f7f9 !important;
+  color: #111111 !important;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+/* ==================== SWISS MINIMALIST STARK DARK THEME ==================== */
+body.dark {
+  background-color: #0c0c0e !important;
+  color: #f3f4f6 !important;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px) !important;
+}
+
+body.dark header {
+  background-color: #121215 !important;
+  border-color: #222229 !important;
+}
+
+body.dark header h1, 
+body.dark header h2, 
+body.dark header h3, 
+body.dark header p, 
+body.dark header span,
+body.dark header div {
+  color: #f3f4f6 !important;
+}
+
+body.dark header button, 
+body.dark header select {
+  background-color: #16161c !important;
+  border-color: #26262f !important;
+  color: #f3f4f6 !important;
+}
+
+body.dark header button:hover {
+  border-color: #e30613 !important;
+}
+
+body.dark .bg-white {
+  background-color: #121215 !important;
+  color: #f3f4f6 !important;
+}
+
+body.dark .border-neutral-200,
+body.dark .border-neutral-100 {
+  border-color: #222229 !important;
+}
+
+body.dark .border-neutral-900 {
+  border-color: #3f3f46 !important;
+}
+
+body.dark .text-neutral-900, 
+body.dark .text-neutral-950 {
+  color: #f3f4f6 !important;
+}
+
+body.dark .text-neutral-500, 
+body.dark .text-neutral-600 {
+  color: #9ca3af !important;
+}
+
+body.dark .text-neutral-400 {
+  color: #9ca3af !important;
+}
+
+body.dark .bg-neutral-50, 
+body.dark .bg-neutral-100 {
+  background-color: #16161c !important;
+  color: #f3f4f6 !important;
+}
+
+body.dark input, 
+body.dark textarea, 
+body.dark select {
+  background-color: #16161c !important;
+  border-color: #26262f !important;
+  color: #f3f4f6 !important;
+}
+
+body.dark input::placeholder, 
+body.dark textarea::placeholder {
+  color: #4b5563 !important;
+}
+
+/* Interactive elements in dark mode */
+body.dark .glass-panel {
+  background: #121215 !important;
+  border-color: #222229 !important;
+}
+
+body.dark .glass-panel-heavy {
+  background: #121215 !important;
+  border: 2px solid #f3f4f6 !important;
+  box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.9);
+}
+
+body.dark .bg-neutral-950 {
+  background-color: #1e1e24 !important;
+  color: #f3f4f6 !important;
+  border-color: #3f3f46 !important;
+}
+
+/* Leaflet map styles in dark mode */
+body.dark .leaflet-container {
+  background: #121215 !important;
+}
+
+body.dark .leaflet-popup-content-wrapper {
+  background: #16161c !important;
+  color: #f3f4f6 !important;
+  border: 1px solid #222229 !important;
+}
+
+body.dark .leaflet-popup-tip {
+  background: #16161c !important;
+  border: 1px solid #222229 !important;
+}
+
+body.dark .leaflet-bar a {
+  background-color: #16161c !important;
+  color: #f3f4f6 !important;
+  border-bottom: 1px solid #222229 !important;
+}
+
+body.dark .leaflet-bar a:hover {
+  background-color: #222229 !important;
+  color: #ffffff !important;
+}
+
+
